@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fxmlplayer.Controller">
+   <center>
+      <MediaView fx:id="mediaView" fitHeight="260.0" fitWidth="500.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="play" onMouseClicked="#playVideo" text="Play">
+               <font>
+                  <Font name="Ink Free" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="30.0" />
+               </padding>
+            </Label>
+            <Label fx:id="pause" onMouseClicked="#pauseVideo" onMouseDragged="#pauseVideo" text="Pause">
+               <padding>
+                  <Insets left="15.0" top="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" top="30.0" />
+               </padding>
+               <graphic>
+                  <Slider fx:id="time" prefHeight="21.0" prefWidth="209.0">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Slider>
+               </graphic>
+            </Label>
+            <Label fx:id="stop" onMouseClicked="#stopVideo" text="Stop">
+               <padding>
+                  <Insets left="30.0" top="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="40.0" top="30.0" />
+               </padding>
+            </Label>
+            <Slider fx:id="vol" orientation="VERTICAL">
+               <padding>
+                  <Insets bottom="5.0" left="70.0" top="40.0" />
+               </padding>
+            </Slider>
+            <Label text="volume">
+               <padding>
+                  <Insets top="50.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="exit" text="Media Player" textFill="#5338a6">
+               <padding>
+                  <Insets left="250.0" />
+               </padding>
+               <font>
+                  <Font name="Javanese Text" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

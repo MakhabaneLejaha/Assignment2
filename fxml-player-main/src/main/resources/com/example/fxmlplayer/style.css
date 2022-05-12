@@ -1,0 +1,24 @@
+.root {
+    -fx-background-image:url("aa.jpg");
+}
+
+#player-controls {
+    -fx-padding: 10px;
+}
+
+.label {
+    -fx-font-size: 20px;
+    -fx-text-fill: #EEEEEE;
+    -fx-cursor: hand;
+}
+
+.label:hover {
+    -fx-text-fill: #9E9E9E;
+}
+
+
+#play {
+    color: #B4886B;
+
+}
+
